@@ -1,0 +1,359 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+}
+
+.periodSelector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.periodSelect {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.periodSelect:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.tableHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tableTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filtersRow .filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 180px;
+  flex: 1;
+  max-width: 250px;
+}
+
+.searchGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 200px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.searchBox {
+  position: relative;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-400);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 36px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  transition: border-color var(--transition-fast);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.filterIcon {
+  font-size: 18px;
+}
+
+.filterSelect {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.tableWrapper {
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  padding: var(--spacing-md);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-50);
+  border-bottom: 2px solid var(--color-gray-200);
+  white-space: nowrap;
+}
+
+.tr {
+  border-bottom: 1px solid var(--color-gray-200);
+  transition: background-color var(--transition-fast);
+}
+
+.tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+.td {
+  padding: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-900);
+}
+
+.emptyState {
+  padding: var(--spacing-2xl);
+  text-align: center;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-base);
+}
+
+.employeeName {
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.employeeId {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-gray-600);
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.expandButton:hover {
+  background-color: var(--color-gray-100);
+}
+
+.differenceCell {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.trendIcon {
+  color: var(--color-success);
+  font-size: 18px;
+}
+
+.trendIconDown {
+  color: var(--color-error);
+  font-size: 18px;
+}
+
+.differenceValue {
+  font-weight: 600;
+}
+
+.differenceValue.positive {
+  color: var(--color-success);
+}
+
+.differenceValue.negative {
+  color: var(--color-error);
+}
+
+.accordionRow {
+  background-color: var(--color-gray-50);
+}
+
+.accordionCell {
+  padding: 0 !important;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.expandedRow {
+  padding: var(--spacing-xl);
+  background-color: var(--color-gray-50);
+}
+
+.expandedHeader {
+  margin-bottom: var(--spacing-lg);
+}
+
+.expandedTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.componentCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-gray-200);
+}
+
+.netCard {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.netCard .componentLabel,
+.netCard .valueLabel,
+.netCard .valueAmount {
+  color: var(--color-white);
+}
+
+.componentHeader {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.netCard .componentHeader {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.componentLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.componentValues {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.componentValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valueLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+}
+
+.valueAmount {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.valueAmount.positive {
+  color: var(--color-success);
+}
+
+.valueAmount.negative {
+  color: var(--color-error);
+}
+
+.netValue {
+  font-size: var(--font-size-lg);
+}
+
